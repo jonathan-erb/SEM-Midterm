@@ -30,11 +30,11 @@ Diagram (derived from Introduction notes)
 
 ```mermaid
 flowchart LR
-	Challenges[Challenges of SE] --> Representations
-	Challenges --> MultipleFormats[Multiple formats]
-	Challenges --> Tools
-	Challenges --> Collaboration
-	Challenges --> Evolution
+  Challenges[Challenges of SE] --> Representations
+  Challenges --> MultipleFormats[Multiple formats]
+  Challenges --> Tools
+  Challenges --> Collaboration
+  Challenges --> Evolution
 ```
 
 <sub>Focus: be ready to give examples for each challenge area and how it impacts process or design.</sub>
@@ -60,12 +60,12 @@ Diagram
 
 ```mermaid
 flowchart LR
-	R[Requirements] --> A[Analysis]
-	A --> D[Design]
-	D --> I[Implementation]
-	I --> T[Testing & Validation]
-	T --> Rel[Release]
-	Rel --> M[Maintenance]
+  R[Requirements] --> A[Analysis]
+  A --> D[Design]
+  D --> I[Implementation]
+  I --> T[Testing & Validation]
+  T --> Rel[Release]
+  Rel --> M[Maintenance]
 ```
 
 <sub>Know the order and what each phase produces (inputs/outputs).</sub>
@@ -79,9 +79,9 @@ Fundamental Activities (from notes)
 
 ```mermaid
 flowchart LR
-	Specification --> DesignImpl[Design & Implementation]
-	DesignImpl --> Validation
-	Validation --> Evolution
+  Specification --> DesignImpl[Design & Implementation]
+  DesignImpl --> Validation
+  Validation --> Evolution
 ```
 
 <sub>Activities are conceptual workflows, not the same as phase names.</sub>
@@ -100,9 +100,9 @@ Diagram (Place of Process from Process notes)
 
 ```mermaid
 flowchart TB
-	Goals --> Process
-	Process --> Methods
-	Methods --> Tools
+  Goals --> Process
+  Process --> Methods
+  Methods --> Tools
 ```
 
 <sub>Place concrete examples under each layer (e.g., UML as a method; IDEs as tools).</sub>
@@ -155,10 +155,10 @@ Diagram (derived)
 
 ```mermaid
 flowchart LR
-	ID[Initial Development] --> E[Evolution]
-	E --> S[Servicing]
-	S --> P[Phaseout]
-	P --> C[Closedown]
+  ID[Initial Development] --> E[Evolution]
+  E --> S[Servicing]
+  S --> P[Phaseout]
+  P --> C[Closedown]
 ```
 
 <sub>Memorize the order: Initial Development → Evolution → Servicing → Phaseout → Closedown.</sub>
@@ -178,8 +178,8 @@ Greenfield vs Brownfield
 
 ```mermaid
 flowchart LR
-	GF["Greenfield (S-type programs)"] --- Rare
-	BF["Brownfield (E-type programs)"] --- Common
+  GF["Greenfield (S-type programs)"] --- Rare
+  BF["Brownfield (E-type programs)"] --- Common
 ```
 
 <sub>Greenfield is rare in practice; most work is brownfield on existing systems.</sub>
@@ -188,10 +188,10 @@ Maintenance Categories (Swanson; ISO/IEC 14764)
 
 ```mermaid
 flowchart TB
-	Maint[Maintenance] --> Corrective
-	Maint --> Adaptive
-	Maint --> Perfective
-	Maint --> Preventive
+  Maint[Maintenance] --> Corrective
+  Maint --> Adaptive
+  Maint --> Perfective
+  Maint --> Preventive
 ```
 
 <sub>Be able to define: corrective (bugs), adaptive (environment), perfective (quality/features), preventive (avoid future issues).</sub>
@@ -216,13 +216,13 @@ Diagram (derived)
 
 ```mermaid
 flowchart TB
-	E[E-type programs] --> L1[Continuing Change]
-	E --> L2[Increasing Complexity]
-	E --> L3[Self Regulation]
-	E --> L4[Conservation of Org. Stability]
-	E --> L5[Conservation of Familiarity]
-	E --> L6[Continuing Growth]
-	E --> L7[Declining Quality]
+  E[E-type programs] --> L1[Continuing Change]
+  E --> L2[Increasing Complexity]
+  E --> L3[Self Regulation]
+  E --> L4[Conservation of Org. Stability]
+  E --> L5[Conservation of Familiarity]
+  E --> L6[Continuing Growth]
+  E --> L7[Declining Quality]
 ```
 
 ### Code Analysis (from notes)
@@ -238,8 +238,8 @@ Static vs Dynamic (derived)
 
 ```mermaid
 flowchart LR
-	Static[Static Analysis] -->|no execution| Artifacts[Code & Artifacts]
-	Dynamic[Dynamic Analysis] -->|run program| Traces[Outputs & Traces]
+  Static[Static Analysis] -->|no execution| Artifacts[Code & Artifacts]
+  Dynamic[Dynamic Analysis] -->|run program| Traces[Outputs & Traces]
 ```
 
 <sub>Static inspects code without running; dynamic runs the system and observes behavior.</sub>
@@ -248,7 +248,7 @@ Lexing to Parsing pipeline (derived)
 
 ```mermaid
 flowchart LR
-	C[Characters] --> T["Tokens (Regex/Lexical)"] --> AST["AST (Parser)"]
+  C[Characters] --> T["Tokens (Regex/Lexical)"] --> AST["AST (Parser)"]
 ```
 
 <sub>Regex/lexers produce tokens; parsers build ASTs for syntax-aware analysis.</sub>
@@ -271,10 +271,10 @@ Diagram (derived)
 
 ```mermaid
 flowchart TB
-	SA[Static Analysis] --> CG[Call Graph]
-	SA --> CFG[Control-Flow Graph]
-	SA --> PDG[Program Dependency Graph]
-	SA --> DFD[Data Flow Diagram]
+  SA[Static Analysis] --> CG[Call Graph]
+  SA --> CFG[Control-Flow Graph]
+  SA --> PDG[Program Dependency Graph]
+  SA --> DFD[Data Flow Diagram]
 ```
 
 Exam tips
@@ -295,11 +295,11 @@ Graph (derived)
 
 ```mermaid
 flowchart LR
-	f --> g
-	f --> h
-	g --> h
-	g --> i
-	h --> i
+  f --> g
+  f --> h
+  g --> h
+  g --> i
+  h --> i
 ```
 
 Optional (GraphViz DOT)
@@ -349,13 +349,13 @@ Mini-CFG (derived for the if/else)
 
 ```mermaid
 flowchart TD
-	S[Start while] --> C{a[mid] == x?}
-	C -- yes --> R1[return mid]
-	C -- no --> C2{a[mid] < x?}
-	C2 -- yes --> L[lo = mid + 1]
-	C2 -- no --> H[hi = mid - 1]
-	L --> S
-	H --> S
+  S[Start while] --> C{a[mid] == x?}
+  C -- yes --> R1[return mid]
+  C -- no --> C2{a[mid] < x?}
+  C2 -- yes --> L[lo = mid + 1]
+  C2 -- no --> H[hi = mid - 1]
+  L --> S
+  H --> S
 ```
 
 Program Dependency Graph (PDG) — concept and slice tie-in
@@ -380,12 +380,12 @@ PDG (derived, partial)
 
 ```mermaid
 flowchart TD
-	W[while (i <= n)] --> S1[sum = sum + i]
-	W --> I1[i = i + 1]
-	Sdef[sum=0] --> S1
-	Idef[i=1] --> S1
-	I1 --> S1
-	Ndef[n=read()] --> W
+  W[while (i <= n)] --> S1[sum = sum + i]
+  W --> I1[i = i + 1]
+  Sdef[sum=0] --> S1
+  Idef[i=1] --> S1
+  I1 --> S1
+  Ndef[n=read()] --> W
 ```
 
 ### Coupling & Cohesion (from notes)
@@ -418,8 +418,8 @@ Diagram (derived)
 
 ```mermaid
 flowchart LR
-	Source[Source Code] --> Dict[System Dictionary]
-	Dict -->|slines, dvariables, cfunctions, pointers| Slice["Slice for <p,V>"]
+  Source[Source Code] --> Dict[System Dictionary]
+  Dict -->|slines, dvariables, cfunctions, pointers| Slice["Slice for <p,V>"]
 ```
 
 Exam tips

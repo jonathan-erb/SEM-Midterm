@@ -13,13 +13,13 @@
 
 ### Challenges of SE
 
-- Representations mathematical visual (diagrams) code natural langauge, verbal
+- Representations: mathematical, visual (diagrams), code, natural language, verbal
 - Multiple formats
-- There are many tools: 
-- - lightweight, indepedent
-- - heavyweight, interdependent
+- There are many tools:
+	- lightweight, independent
+	- heavyweight, interdependent
 
--  Collaboration
+- Collaboration
 - Evolution
 
 Exam tips
@@ -178,8 +178,8 @@ Greenfield vs Brownfield
 
 ```mermaid
 flowchart LR
-	GF[Greenfield\n(S-type programs)] --- Rare
-	BF[Brownfield\n(E-type programs)] --- Common
+	GF["Greenfield (S-type programs)"] --- Rare
+	BF["Brownfield (E-type programs)"] --- Common
 ```
 
 <sub>Greenfield is rare in practice; most work is brownfield on existing systems.</sub>
@@ -248,7 +248,7 @@ Lexing to Parsing pipeline (derived)
 
 ```mermaid
 flowchart LR
-	C[Characters] --> T[Tokens\n(Regex/Lexical)] --> AST[AST\n(Parser)]
+	C[Characters] --> T["Tokens (Regex/Lexical)"] --> AST["AST (Parser)"]
 ```
 
 <sub>Regex/lexers produce tokens; parsers build ASTs for syntax-aware analysis.</sub>
@@ -295,16 +295,18 @@ Graph (derived)
 
 ```mermaid
 flowchart LR
-	main --> f
 	f --> g
-	main --> h
+	f --> h
+	g --> h
+	g --> i
+	h --> i
 ```
 
 Optional (GraphViz DOT)
 
 ```dot
 digraph CallGraph {
-	main -> f; f -> g; main -> h;
+	f -> g; f -> h; g -> h; g -> i; h -> i;
 }
 ```
 
@@ -417,7 +419,7 @@ Diagram (derived)
 ```mermaid
 flowchart LR
 	Source[Source Code] --> Dict[System Dictionary]
-	Dict -->|slines, dvariables, cfunctions, pointers| Slice[Slice for <p,V>]
+	Dict -->|slines, dvariables, cfunctions, pointers| Slice["Slice for <p,V>"]
 ```
 
 Exam tips

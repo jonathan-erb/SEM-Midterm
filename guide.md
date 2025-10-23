@@ -350,11 +350,11 @@ Mini-CFG (derived for the if/else)
 ```mermaid
 flowchart TD
 
-S[Start while] --> C{a[mid] == x?}
-C -- yes --> R1[return mid]
-C -- no --> C2{a[mid] < x?}
-C2 -- yes --> L[lo = mid + 1]
-C2 -- no --> H[hi = mid - 1]
+S["Start while"] --> C{"a[mid] == x?"}
+C -- yes --> R1["return mid"]
+C -- no --> C2{"a[mid] < x?"}
+C2 -- yes --> L["lo = mid + 1"]
+C2 -- no --> H["hi = mid - 1"]
 L --> S
 H --> S
 ```

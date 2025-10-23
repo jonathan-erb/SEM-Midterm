@@ -349,13 +349,14 @@ Mini-CFG (derived for the if/else)
 
 ```mermaid
 flowchart TD
-  S[Start while] --> C{a[mid] == x?}
-  C -- yes --> R1[return mid]
-  C -- no --> C2{a[mid] < x?}
-  C2 -- yes --> L[lo = mid + 1]
-  C2 -- no --> H[hi = mid - 1]
-  L --> S
-  H --> S
+
+S[Start while] --> C{a[mid] == x?}
+C -- yes --> R1[return mid]
+C -- no --> C2{a[mid] < x?}
+C2 -- yes --> L[lo = mid + 1]
+C2 -- no --> H[hi = mid - 1]
+L --> S
+H --> S
 ```
 
 Program Dependency Graph (PDG) — concept and slice tie-in
@@ -380,12 +381,13 @@ PDG (derived, partial)
 
 ```mermaid
 flowchart TD
-  W[while (i <= n)] --> S1[sum = sum + i]
-  W --> I1[i = i + 1]
-  Sdef[sum=0] --> S1
-  Idef[i=1] --> S1
-  I1 --> S1
-  Ndef[n=read()] --> W
+
+W["while (i <= n)"] --> S1["sum = sum + i"]
+W --> I1["i = i + 1"]
+Sdef["sum = 0"] --> S1
+Idef["i = 1"] --> S1
+I1 --> S1
+Ndef["n = read()"] --> W
 ```
 
 ### Coupling & Cohesion (from notes)
